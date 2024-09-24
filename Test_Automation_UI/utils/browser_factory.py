@@ -11,6 +11,6 @@ class BrowserFactory:
 
     def get_driver(self):
         if self.browser == 'chrome':
-            return webdriver.Chrome(service=ChromeService(ChromeDriverManager(driver_version="128.0.6613.139").install()))
+            return webdriver.Chrome()
         else:
             raise ValueError(f"Browser '{self.browser}' is not supported")
